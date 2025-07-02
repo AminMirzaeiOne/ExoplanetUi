@@ -1,4 +1,4 @@
-﻿namespace Sunny.UI
+﻿namespace Exoplanet.UI
 {
     partial class UIHeaderAsideMainFooterFrame
     {
