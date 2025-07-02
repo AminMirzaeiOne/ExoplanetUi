@@ -1,30 +1,5 @@
-﻿/******************************************************************************
- * SunnyUI 开源控件库、工具类库、扩展类库、多页面开发框架。
- * CopyRight (C) 2012-2025 ShenYongHua(沈永华).
- * QQ群：56829229 QQ：17612584 EMail：SunnyUI@QQ.Com
- *
- * Blog:   https://www.cnblogs.com/yhuse
- * Gitee:  https://gitee.com/yhuse/SunnyUI
- * GitHub: https://github.com/yhuse/SunnyUI
- *
- * SunnyUI.dll can be used for free under the GPL-3.0 license.
- * If you use this code, please keep this note.
- * 如果您使用此代码，请保留此说明。
- ******************************************************************************
- * 文件名称: UIStyles.cs
- * 文件说明: 主题样式管理类
- * 当前版本: V3.1
- * 创建日期: 2020-01-01
- *
- * 2020-01-01: V2.2.0 增加文件说明
- * 2021-07-12: V3.0.5 增加紫色主题
- * 2021-07-18: V3.0.5 增加多彩主题，以颜色深色，文字白色为主
- * 2021-09-24: V3.0.7 修改默认字体的GdiCharSet
- * 2021-10-16: V3.0.8 增加系统DPI缩放自适应
- * 2023-08-28: V3.4.2 修改全局字体为系统默认字体
- * 2023-11-05: V3.5.2 重构主题
-******************************************************************************/
-
+﻿
+using Sunny.UI;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -35,10 +10,10 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static System.Drawing.FontConverter;
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     /// <summary>
-    /// 主题样式管理类
+    /// Theme Style Management Class
     /// </summary>
     public static class UIStyles
     {
@@ -47,7 +22,7 @@ namespace Sunny.UI
         public static bool GlobalRectangle { get; set; } = false;
 
         /// <summary>
-        /// 多语言支持
+        /// Multi-language support
         /// </summary>
         public static bool MultiLanguageSupport { get; set; } = false;
 
@@ -57,35 +32,35 @@ namespace Sunny.UI
 
         [Editor("System.Drawing.Design.FontNameEditor", "System.Drawing.Design.UITypeEditor")]
         [TypeConverter(typeof(FontNameConverter))]
-        public static string GlobalFontName { get; set; } = "宋体";
+        public static string GlobalFontName { get; set; } = "SimSun";
 
         public static int GlobalFontScale { get; set; } = 100;
 
-        private static readonly ConcurrentDictionary<string, byte> FontCharSets = new ConcurrentDictionary<string, byte>();
+        private static readonly ConcurrentDictionary<string, byte> FontCharSets = new();
 
-        //GdiCharSet
-        //一个字节值，该值指定使用此 Font 字符集的 GDI 字符集。 默认值为 1。
-        //字符集	        值
-        //ANSI	        0
-        //DEFAULT	    1
-        //象征	        2
-        //SHIFTJIS	    128
-        //HANGEUL	    129
-        //HANGUL	    129
-        //GB2312	    134
-        //中国BIG5	    136
-        //OEM	        255
-        //JOHAB	        130
-        //希伯来语	    177
-        //阿拉伯语	    178
-        //希腊语	        161
-        //土耳其语	    162
-        //越南语	        163
-        //泰语	        222
-        //EASTEUROPE	238
-        //俄语	        204
-        //MAC	        77
-        //波罗的海	    186
+        // GdiCharSet
+        // A byte value specifying the GDI charset used by this font. Default is 1.
+        // Charset           Value
+        // ANSI              0
+        // DEFAULT           1
+        // SYMBOL            2
+        // SHIFTJIS          128
+        // HANGEUL           129
+        // HANGUL            129
+        // GB2312            134
+        // Chinese BIG5      136
+        // OEM               255
+        // JOHAB             130
+        // Hebrew            177
+        // Arabic            178
+        // Greek             161
+        // Turkish           162
+        // Vietnamese        163
+        // Thai              222
+        // EASTEUROPE        238
+        // Russian           204
+        // MAC               77
+        // Baltic            186
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
         internal class LOGFONT
@@ -121,7 +96,7 @@ namespace Sunny.UI
         internal static float DefaultSubFontSize = 9;
 
         /// <summary>
-        /// 默认字体
+        /// Default font
         /// </summary>
         internal static Font Font()
         {
@@ -130,7 +105,7 @@ namespace Sunny.UI
         }
 
         /// <summary>
-        /// 默认二级字体
+        /// Default sub font
         /// </summary>
         internal static Font SubFont()
         {
@@ -155,52 +130,52 @@ namespace Sunny.UI
         public static readonly UIBaseStyle Inherited = new UIInheritedStyle();
 
         /// <summary>
-        /// 自定义
+        /// Custom style
         /// </summary>
         private static readonly UIBaseStyle Custom = new UICustomStyle();
 
         /// <summary>
-        /// 蓝
+        /// Blue
         /// </summary>
         public static readonly UIBaseStyle Blue = new UIBlueStyle();
 
         /// <summary>
-        /// 橙
+        /// Orange
         /// </summary>
         public static readonly UIBaseStyle Orange = new UIOrangeStyle();
 
         /// <summary>
-        /// 灰
+        /// Gray
         /// </summary>
         public static readonly UIBaseStyle Gray = new UIGrayStyle();
 
         /// <summary>
-        /// 绿
+        /// Green
         /// </summary>
         public static readonly UIBaseStyle Green = new UIGreenStyle();
 
         /// <summary>
-        /// 红
+        /// Red
         /// </summary>
         public static readonly UIBaseStyle Red = new UIRedStyle();
 
         /// <summary>
-        /// 深蓝
+        /// Dark Blue
         /// </summary>
         public static readonly UIBaseStyle DarkBlue = new UIDarkBlueStyle();
 
         /// <summary>
-        /// 黑
+        /// Black
         /// </summary>
         public static readonly UIBaseStyle Black = new UIBlackStyle();
 
         /// <summary>
-        /// 紫
+        /// Purple
         /// </summary>
         public static readonly UIBaseStyle Purple = new UIPurpleStyle();
 
         /// <summary>
-        /// 多彩
+        /// Colorful
         /// </summary>
         private static readonly UIColorfulStyle Colorful = new UIColorfulStyle();
 
@@ -210,14 +185,14 @@ namespace Sunny.UI
             SetStyle(UIStyle.Colorful);
         }
 
-        internal static readonly ConcurrentDictionary<UIStyle, UIBaseStyle> Styles = new ConcurrentDictionary<UIStyle, UIBaseStyle>();
-        internal static readonly ConcurrentDictionary<Guid, UIBaseForm> Forms = new ConcurrentDictionary<Guid, UIBaseForm>();
-        internal static readonly ConcurrentDictionary<Guid, UIPage> Pages = new ConcurrentDictionary<Guid, UIPage>();
+        internal static readonly ConcurrentDictionary<UIStyle, UIBaseStyle> Styles = new();
+        internal static readonly ConcurrentDictionary<Guid, UIBaseForm> Forms = new();
+        internal static readonly ConcurrentDictionary<Guid, UIPage> Pages = new();
 
         /// <summary>
-        /// 菜单颜色集合
+        /// Menu color collection
         /// </summary>
-        public static readonly ConcurrentDictionary<UIMenuStyle, UIMenuColor> MenuColors = new ConcurrentDictionary<UIMenuStyle, UIMenuColor>();
+        public static readonly ConcurrentDictionary<UIMenuStyle, UIMenuColor> MenuColors = new();
 
         static UIStyles()
         {
@@ -250,19 +225,19 @@ namespace Sunny.UI
         }
 
         /// <summary>
-        /// 主题样式整数值
+        /// Theme style integer value
         /// </summary>
-        /// <param name="style">主题样式</param>
-        /// <returns>整数值</returns>
+        /// <param name="style">Theme style</param>
+        /// <returns>Integer value</returns>
         public static int Value(this UIStyle style)
         {
             return (int)style;
         }
 
         /// <summary>
-        /// 注册窗体
+        /// Register form
         /// </summary>
-        /// <param name="form">窗体</param>
+        /// <param name="form">Form</param>
         public static bool Register(this UIBaseForm form)
         {
             if (!Forms.ContainsKey(form.Guid))
@@ -275,9 +250,9 @@ namespace Sunny.UI
         }
 
         /// <summary>
-        /// 注册页面
+        /// Register page
         /// </summary>
-        /// <param name="page">页面</param>
+        /// <param name="page">Page</param>
         public static bool Register(this UIPage page)
         {
             if (!Pages.ContainsKey(page.Guid))
@@ -291,7 +266,7 @@ namespace Sunny.UI
 
         public static List<T> GetPages<T>() where T : UIPage
         {
-            List<T> result = new List<T>();
+            List<T> result = new();
             foreach (var page in Pages)
             {
                 if (page is T pg)
@@ -302,28 +277,28 @@ namespace Sunny.UI
         }
 
         /// <summary>
-        /// 反注册窗体
+        /// Unregister form
         /// </summary>
-        /// <param name="form">窗体</param>
+        /// <param name="form">Form</param>
         public static void UnRegister(this UIBaseForm form)
         {
             Forms.TryRemove(form.Guid, out _);
         }
 
         /// <summary>
-        /// 反注册页面
+        /// Unregister page
         /// </summary>
-        /// <param name="page">页面</param>
+        /// <param name="page">Page</param>
         public static void UnRegister(this UIPage page)
         {
             Pages.TryRemove(page.Guid, out _);
         }
 
         /// <summary>
-        /// 获取主题样式
+        /// Get theme style
         /// </summary>
-        /// <param name="style">主题样式名称</param>
-        /// <returns>主题样式</returns>
+        /// <param name="style">Theme style name</param>
+        /// <returns>Theme style</returns>
         public static UIBaseStyle GetStyleColor(UIStyle style)
         {
             if (Styles.ContainsKey(style))
@@ -348,14 +323,14 @@ namespace Sunny.UI
         }
 
         /// <summary>
-        /// 主题样式
+        /// Theme Style
         /// </summary>
         public static UIStyle Style { get; private set; } = UIStyle.Inherited;
 
         /// <summary>
-        /// 设置主题样式
+        /// Set theme style
         /// </summary>
-        /// <param name="style">主题样式</param>
+        /// <param name="style">Theme style</param>
         public static void SetStyle(UIStyle style)
         {
             if (style != UIStyle.Colorful && Style == style) return;
@@ -428,4 +403,5 @@ namespace Sunny.UI
         public static readonly ConcurrentDictionary<int, UIBuiltInResources> BuiltInResources = new();
         public static UIBuiltInResources CurrentResources => BuiltInResources[CultureInfo.LCID];
     }
+
 }
