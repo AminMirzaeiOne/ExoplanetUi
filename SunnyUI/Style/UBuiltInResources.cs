@@ -22,7 +22,7 @@
 
 using System.Globalization;
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     public class zh_CN_Resources : UIBuiltInResources
     {
