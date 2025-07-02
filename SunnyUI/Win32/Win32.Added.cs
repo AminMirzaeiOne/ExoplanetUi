@@ -6,7 +6,7 @@ using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 
-namespace Sunny.UI.Win32
+namespace Exoplanet.UI.Win32
 {
 #pragma warning disable CS1591 // 缺少对公共可见类型或成员的 XML 注释
     public static class Win32Helper
