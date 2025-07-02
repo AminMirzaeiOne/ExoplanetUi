@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6AE19B87-C2AA-4C56-BC26-1C343F30FF58}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Sunny.UI.Demo</RootNamespace>
-    <AssemblyName>SunnyUI.Demo</AssemblyName>
+    <RootNamespace>Exoplanet.UI.Demo</RootNamespace>
+    <AssemblyName>ExoplanetUI.Demo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

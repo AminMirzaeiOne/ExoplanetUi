@@ -1,4 +1,4 @@
-﻿using Sunny.UI.Demo.Properties;
+﻿using Exoplanet.UI.Demo.Properties;
 using System;
 using System.Drawing;
 

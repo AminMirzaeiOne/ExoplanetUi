@@ -58,7 +58,7 @@ namespace Sunny.UI.Demo
             // 
             this.uiImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton3.Font = new System.Drawing.Font("宋体", 12F);
-            this.uiImageButton3.Image = global::Sunny.UI.Demo.Properties.Resources.ChartDarkStyle;
+            this.uiImageButton3.Image = global::Exoplanet.UI.Demo.Properties.Resources.ChartDarkStyle;
             this.uiImageButton3.Location = new System.Drawing.Point(242, 505);
             this.uiImageButton3.Name = "uiImageButton3";
             this.uiImageButton3.Size = new System.Drawing.Size(100, 27);
@@ -72,7 +72,7 @@ namespace Sunny.UI.Demo
             // 
             this.uiImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton2.Font = new System.Drawing.Font("宋体", 12F);
-            this.uiImageButton2.Image = global::Sunny.UI.Demo.Properties.Resources.ChartPlainStyle;
+            this.uiImageButton2.Image = global::Exoplanet.UI.Demo.Properties.Resources.ChartPlainStyle;
             this.uiImageButton2.Location = new System.Drawing.Point(136, 505);
             this.uiImageButton2.Name = "uiImageButton2";
             this.uiImageButton2.Size = new System.Drawing.Size(100, 27);
@@ -86,7 +86,7 @@ namespace Sunny.UI.Demo
             // 
             this.uiImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton1.Font = new System.Drawing.Font("宋体", 12F);
-            this.uiImageButton1.Image = global::Sunny.UI.Demo.Properties.Resources.ChartDefaultStyle;
+            this.uiImageButton1.Image = global::Exoplanet.UI.Demo.Properties.Resources.ChartDefaultStyle;
             this.uiImageButton1.Location = new System.Drawing.Point(30, 505);
             this.uiImageButton1.Name = "uiImageButton1";
             this.uiImageButton1.Size = new System.Drawing.Size(100, 27);
