@@ -10,7 +10,7 @@ Port of David Merfield's javascript random color generator. Ported by Nathan Jon
 License: MIT License
 */
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     /// <summary>
     /// Generates random numbers.

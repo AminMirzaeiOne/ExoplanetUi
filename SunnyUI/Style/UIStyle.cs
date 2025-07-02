@@ -1,36 +1,11 @@
-﻿/******************************************************************************
- * SunnyUI 开源控件库、工具类库、扩展类库、多页面开发框架。
- * CopyRight (C) 2012-2025 ShenYongHua(沈永华).
- * QQ群：56829229 QQ：17612584 EMail：SunnyUI@QQ.Com
- *
- * Blog:   https://www.cnblogs.com/yhuse
- * Gitee:  https://gitee.com/yhuse/SunnyUI
- * GitHub: https://github.com/yhuse/SunnyUI
- *
- * SunnyUI.dll can be used for free under the GPL-3.0 license.
- * If you use this code, please keep this note.
- * 如果您使用此代码，请保留此说明。
- ******************************************************************************
- * 文件名称: UIStyle.cs
- * 文件说明: 控件样式定义类
- * 当前版本: V3.1
- * 创建日期: 2020-01-01
- *
- * 2020-01-01: V2.2.0 增加文件说明
- * 2021-07-12: V3.0.5 增加紫色主题
- * 2021-07-18: V3.0.5 增加多彩主题，以颜色深色，文字白色为主
- * 2021-09-24: V3.0.7 修改默认字体的GdiCharSet
- * 2021-10-16: V3.0.8 增加系统DPI缩放自适应
- * 2023-11-05: V3.5.2 重构主题
-******************************************************************************/
-
+﻿
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     public interface IStyleInterface
     {

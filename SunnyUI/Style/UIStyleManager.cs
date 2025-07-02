@@ -1,39 +1,17 @@
-﻿/******************************************************************************
- * SunnyUI 开源控件库、工具类库、扩展类库、多页面开发框架。
- * CopyRight (C) 2012-2025 ShenYongHua(沈永华).
- * QQ群：56829229 QQ：17612584 EMail：SunnyUI@QQ.Com
- *
- * Blog:   https://www.cnblogs.com/yhuse
- * Gitee:  https://gitee.com/yhuse/SunnyUI
- * GitHub: https://github.com/yhuse/SunnyUI
- *
- * SunnyUI.dll can be used for free under the GPL-3.0 license.
- * If you use this code, please keep this note.
- * 如果您使用此代码，请保留此说明。
- ******************************************************************************
- * 文件名称: UIStyleManager.cs
- * 文件说明: 主题样式管理类
- * 当前版本: V3.1
- * 创建日期: 2020-01-01
- *
- * 2020-01-01: V2.2.0 增加文件说明
- * 2021-10-16: V3.0.8 增加系统DPI缩放自适应
- * 2023-11-05: V3.5.2 重构主题
-******************************************************************************/
-
+﻿
 using System.ComponentModel;
 using static System.Drawing.FontConverter;
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     /// <summary>
-    /// 主题样式管理类
+    /// Theme Style Manager Class
     /// </summary>
-    [Description("主题样式管理控件")]
+    [Description("Theme Style Management Control")]
     public class UIStyleManager : Component
     {
         /// <summary>
-        /// 构造函数
+        /// Constructor
         /// </summary>
         public UIStyleManager()
         {
@@ -41,9 +19,9 @@ namespace Sunny.UI
         }
 
         /// <summary>
-        /// 构造函数
+        /// Constructor
         /// </summary>
-        /// <param name="container"></param>
+        /// <param name="container">Component container</param>
         public UIStyleManager(IContainer container) : this()
         {
             container.Add(this);
@@ -51,9 +29,9 @@ namespace Sunny.UI
         }
 
         /// <summary>
-        /// 主题样式
+        /// Theme style
         /// </summary>
-        [DefaultValue(UIStyle.Inherited), Description("主题样式"), Category("SunnyUI")]
+        [DefaultValue(UIStyle.Inherited), Description("Theme Style"), Category("SunnyUI")]
         [Browsable(false)]
         public UIStyle Style
         {
@@ -61,7 +39,7 @@ namespace Sunny.UI
             set => UIStyles.SetStyle(value);
         }
 
-        [DefaultValue(false), Description("DPI缩放"), Category("SunnyUI")]
+        [DefaultValue(false), Description("DPI Scaling"), Category("SunnyUI")]
         public bool DPIScale
         {
             get => UIStyles.DPIScale;
@@ -70,8 +48,8 @@ namespace Sunny.UI
 
         [Editor("System.Drawing.Design.FontNameEditor", "System.Drawing.Design.UITypeEditor")]
         [TypeConverter(typeof(FontNameConverter))]
-        [DefaultValue("宋体")]
-        [Description("全局字体设置开启后，可调字体名称"), Category("SunnyUI")]
+        [DefaultValue("SimSun")]
+        [Description("Adjustable font name when global font setting is enabled"), Category("SunnyUI")]
         public string GlobalFontName
         {
             get => UIStyles.GlobalFontName;
@@ -79,7 +57,7 @@ namespace Sunny.UI
         }
 
         [DefaultValue(100)]
-        [Description("全局字体设置开启后，可调字体大小缩放百分比，默认100%"), Category("SunnyUI")]
+        [Description("Adjustable font size scaling percentage when global font setting is enabled (default 100 %)"), Category("SunnyUI")]
         public int GlobalFontScale
         {
             get => UIStyles.GlobalFontScale;
@@ -87,7 +65,7 @@ namespace Sunny.UI
         }
 
         [DefaultValue(false)]
-        [Description("全局字体设置"), Category("SunnyUI")]
+        [Description("Enable global font setting"), Category("SunnyUI")]
         public bool GlobalFont
         {
             get => UIStyles.GlobalFont;
@@ -95,7 +73,7 @@ namespace Sunny.UI
         }
 
         [DefaultValue(false)]
-        [Description("全局矩形设置，开启后所有控件都关闭圆角效果"), Category("SunnyUI")]
+        [Description("Enable global rectangle setting; disables rounded corners for all controls"), Category("SunnyUI")]
         public bool GlobalRectangle
         {
             get => UIStyles.GlobalRectangle;
@@ -103,7 +81,7 @@ namespace Sunny.UI
         }
 
         [DefaultValue(false)]
-        [Description("多语言支持"), Category("SunnyUI")]
+        [Description("Multilanguage support"), Category("SunnyUI")]
         public bool MultiLanguageSupport
         {
             get => UIStyles.MultiLanguageSupport;
@@ -111,11 +89,12 @@ namespace Sunny.UI
         }
 
         /// <summary>
-        /// 版本
+        /// Version
         /// </summary>
         public string Version
         {
             get;
         }
     }
+
 }
