@@ -1,27 +1,4 @@
-﻿/******************************************************************************
- * SunnyUI 开源控件库、工具类库、扩展类库、多页面开发框架。
- * CopyRight (C) 2012-2025 ShenYongHua(沈永华).
- * QQ群：56829229 QQ：17612584 EMail：SunnyUI@QQ.Com
- *
- * Blog:   https://www.cnblogs.com/yhuse
- * Gitee:  https://gitee.com/yhuse/SunnyUI
- * GitHub: https://github.com/yhuse/SunnyUI
- *
- * SunnyUI.dll can be used for free under the GPL-3.0 license.
- * If you use this code, please keep this note.
- * 如果您使用此代码，请保留此说明。
- ******************************************************************************
- * 文件名称: UIBaseForm.cs
- * 文件说明: 窗体基类
- * 当前版本: V3.6
- * 创建日期: 2024-04-29
- *
- * 2024-04-29: V3.6.5 增加文件说明
- * 2024-04-29: V3.6.5 删除ShowTitleIcon，默认使用ShowIcon
- * 2024-10-05: V3.7.0 增加属性IconImage，以改善Icon转Image显示不佳，状态栏显示仍然用Icon属性
- * 2024-10-29: V3.7.2 IconImage增加IconImageSize属性，可调整大小
-******************************************************************************/
-
+﻿
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -33,7 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     public partial class UIBaseForm : Form, IFrame, IStyleInterface, ITranslate
     {

@@ -1,52 +1,4 @@
-﻿/******************************************************************************
- * SunnyUI 开源控件库、工具类库、扩展类库、多页面开发框架。
- * CopyRight (C) 2012-2025 ShenYongHua(沈永华).
- * QQ群：56829229 QQ：17612584 EMail：SunnyUI@QQ.Com
- *
- * Blog:   https://www.cnblogs.com/yhuse
- * Gitee:  https://gitee.com/yhuse/SunnyUI
- * GitHub: https://github.com/yhuse/SunnyUI
- *
- * SunnyUI.dll can be used for free under the GPL-3.0 license.
- * If you use this code, please keep this note.
- * 如果您使用此代码，请保留此说明。
- ******************************************************************************
- * 文件名称: UIPage.cs
- * 文件说明: 页面基类，从Form继承，可放置于容器内
- * 当前版本: V3.1
- * 创建日期: 2020-01-01
- *
- * 2020-01-01: V2.2.0 增加文件说明
- * 2021-05-21: V3.0.4 更改了下页面切换重复执行的Init事件调用
- * 2021-06-20: V3.0.4 增加标题行，替代UITitlePage
- * 2021-07-18: V3.0.5 修复OnLoad在加载时重复加载两次的问题，增加Final函数，每次页面切换，退出页面都会执行
- * 2021-08-17: V3.0.6 增加TitleFont属性
- * 2021-08-24: V3.0.6 修复OnLoad在加载时重复加载两次的问题
- * 2021-12-01: V3.0.9 增加FeedBack和SetParam函数，用于多页面传值
- * 2021-12-30: V3.0.9 增加NeedReload，页面切换是否需要重载Load
- * 2022-04-02: V3.1.2 默认设置AutoScaleMode为None
- * 2022-04-26: V3.1.8 屏蔽一些属性
- * 2022-05-11: V3.1.8 ShowTitle时，可调整Padding
- * 2022-06-11: V3.1.9 弹窗默认关闭半透明遮罩
- * 2022-08-25: V3.2.3 重构多页面框架传值删除SetParam，FeedbackToFrame
- * 2022-08-25: V3.2.3 重构多页面框架传值：页面发送给框架 SendParamToFrame 函数
- * 2022-08-25: V3.2.3 重构多页面框架传值：页面发送给框架 SendParamToPage 函数
- * 2022-08-25: V3.2.3 重构多页面框架传值：接收框架、页面传值 ReceiveParams 事件
- * 2022-10-28: V3.2.6 标题栏增加扩展按钮
- * 2023-02-24: V3.3.2 增加PageDeselecting，取消页面选择时增加判断
- * 2023-02-24: V3.3.2 取消设计期的Dock.Fill，改为运行时设置
- * 2023-03-15: V3.3.3 重新梳理页面加载顺序
- * 2023-05-12: V3.3.6 重构DrawString函数
- * 2023-07-27: V3.4.1 默认提示弹窗TopMost为true
- * 2023-10-09: V3.5.0 增加一个在窗体显示后延时执行的事件
- * 2023-10-26: V3.5.1 字体图标增加旋转角度参数SymbolRotate
- * 2023-11-06: V3.5.2 重构主题
- * 2023-12-04: V3.6.1 修复修改Style后，BackColor未保存的问题
- * 2023-12-20: V3.6.2 调整AfterShow事件位置及逻辑
- * 2024-04-28: V3.6.5 增加WindowStateChanged事件
- * 2024-10-30: V3.7.2 增加标题栏图片属性IconImage，优先于Symbol
-******************************************************************************/
-
+﻿
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -54,7 +6,7 @@ using System.Drawing;
 using System.Drawing.Design;
 using System.Windows.Forms;
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     [DefaultEvent("Initialize")]
     public partial class UIPage : Form, IStyleInterface, ISymbol, IZoomScale, ITranslate
