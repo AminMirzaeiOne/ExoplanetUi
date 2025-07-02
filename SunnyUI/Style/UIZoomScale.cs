@@ -1,23 +1,24 @@
-﻿using System.Drawing;
+﻿using Sunny.UI;
+using System.Drawing;
 using System.Windows.Forms;
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     public interface IZoomScale
     {
         /// <summary>
-        /// 设置控件缩放比例
+        /// Set the control zoom scale
         /// </summary>
-        /// <param name="scale">缩放比例</param>
+        /// <param name="scale">Zoom scale</param>
         void SetZoomScale(float scale);
 
         /// <summary>
-        /// 控件缩放前在其容器里的位置
+        /// Position of the control in its container before zoom
         /// </summary>
         Rectangle ZoomScaleRect { get; set; }
 
         /// <summary>
-        /// 禁止控件跟随窗体缩放
+        /// Disable the control from following form zoom
         /// </summary>
         bool ZoomScaleDisabled { get; set; }
     }
@@ -81,10 +82,10 @@ namespace Sunny.UI
         }
 
         /// <summary>
-        /// 设置控件缩放比例
+        /// Set the control zoom scale
         /// </summary>
-        /// <param name="control">控件</param>
-        /// <param name="scale">缩放比例</param>
+        /// <param name="control">Control</param>
+        /// <param name="scale">Zoom scale</param>
         internal static void SetZoomScale(Control control, float scale)
         {
             if (scale.EqualsFloat(0)) return;
@@ -96,10 +97,10 @@ namespace Sunny.UI
                     return;
                 }
 
-                //设置控件的缩放参数
+                // Set the zoom parameters for the control
                 ctrl.ZoomScaleRect = UIZoomScale.Create(control);
 
-                //设置自定义的缩放，例如UIAvatar
+                // Apply custom zoom scaling, e.g., UIAvatar
                 ctrl.SetZoomScale(scale);
 
                 if (control.Dock == DockStyle.Fill)
@@ -163,4 +164,5 @@ namespace Sunny.UI
             }
         }
     }
+
 }

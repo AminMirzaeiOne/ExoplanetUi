@@ -1,24 +1,4 @@
-﻿/******************************************************************************
- * SunnyUI 开源控件库、工具类库、扩展类库、多页面开发框架。
- * CopyRight (C) 2012-2025 ShenYongHua(沈永华).
- * QQ群：56829229 QQ：17612584 EMail：SunnyUI@QQ.Com
- *
- * Blog:   https://www.cnblogs.com/yhuse
- * Gitee:  https://gitee.com/yhuse/SunnyUI
- * GitHub: https://github.com/yhuse/SunnyUI
- *
- * SunnyUI.Common.dll can be used for free under the MIT license.
- * If you use this code, please keep this note.
- * 如果您使用此代码，请保留此说明。
- ******************************************************************************
- * 文件名称: UTranslate.cs
- * 文件说明: 多语翻译接口
- * 当前版本: V3.1
- * 创建日期: 2021-07-23
- *
- * 2021-07-23: V3.0.5 增加文件说明
-******************************************************************************/
-
+﻿
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -29,21 +9,21 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     /// <summary>
-    /// 内置资源多语翻译接口
+    /// Built-in resource multi-language translation interface
     /// </summary>
     public interface ITranslate
     {
         /// <summary>
-        /// 多语翻译接口
+        /// Multi-language translation interface
         /// </summary>
         void Translate();
     }
 
     /// <summary>
-    /// 界面显示控件多语翻译接口
+    /// Interface for multi-language translation of UI display controls
     /// </summary>
     public interface IFormTranslator
     {
@@ -52,10 +32,11 @@ namespace Sunny.UI
         bool MultiLanguageSupport { get; set; }
     }
 
+
     public static class TranslateHelper
     {
         private static List<string> Includes = [
-            //SunnyUI Controls
+            //ExoplanetUI Controls
             "UIButton",
             "UISymbolButton",
             "UIGroupBox",
@@ -180,7 +161,7 @@ namespace Sunny.UI
                     inifile = Dir.CurrentDir() + "Language\\" + inifile + ".ini";
                     IniFile ini = new IniFile(inifile, System.Text.Encoding.UTF8);
                     string section = "Info";
-                    const string warning = "注意：请先关闭应用程序，然后再修改此文档。否则修改可能会应用程序生成代码覆盖。";
+                    const string warning = "Note: Please close the application before modifying this file. Otherwise, modifications may be overwritten by the application's code generation.";
                     if (ini.Read(section, "Warning", "") != warning)
                         ini.Write(section, "Warning", warning);
                     ini.UpdateFile();
@@ -306,7 +287,7 @@ namespace Sunny.UI
     public class IniCodeTranslator<TConfig> where TConfig : IniCodeTranslator<TConfig>, new()
     {
         /// <summary>
-        /// 当前实例。通过置空可以使其重新加载。
+        /// Current instance. Set to null to reload.
         /// </summary>
         public static TConfig Current
         {
@@ -320,7 +301,7 @@ namespace Sunny.UI
         }
 
         /// <summary>
-        /// 设置默认值
+        /// Set default values
         /// </summary>
         public virtual void SetDefault()
         {
@@ -329,7 +310,7 @@ namespace Sunny.UI
         public static void Load(Form form) => Current.LoadResources(form);
 
         /// <summary>
-        /// 实体对象
+        /// Entity object
         /// </summary>
         private static TConfig current;
 
@@ -449,7 +430,7 @@ namespace Sunny.UI
                         continue;
                     }
 
-                    throw new ApplicationException("不支持此类型: " + propertyType.FullName);
+                    throw new ApplicationException("This type is not supported: " + propertyType.FullName);
                 }
             }
         }
