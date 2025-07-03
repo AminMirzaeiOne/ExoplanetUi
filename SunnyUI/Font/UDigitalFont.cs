@@ -3,7 +3,7 @@ using System.Drawing.Text;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     public class DigitalFont
     {

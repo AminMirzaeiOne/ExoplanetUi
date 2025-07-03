@@ -8,7 +8,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace Sunny.UI
+namespace Exoplanet.UI
 {
     /// <summary>
     /// 字体图标图片

@@ -1,4 +1,4 @@
-﻿namespace Sunny.UI
+﻿namespace Exoplanet.UI
 {
     /// <summary>
     /// ElegantIcons.ttf V1.0

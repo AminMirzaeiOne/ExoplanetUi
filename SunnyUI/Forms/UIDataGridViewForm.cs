@@ -1,4 +1,4 @@
-﻿namespace Sunny.UI
+﻿namespace Exoplanet.UI
 {
     public partial class UIDataGridViewForm : UIPage
     {
